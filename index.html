@@ -486,6 +486,59 @@
       .preview-frame { height: 520px; }
     }
 
+    /* Preview fallback (no iframe - opens in new tab) */
+    .preview-fallback {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 56px 24px;
+      min-height: 560px;
+      background:
+        radial-gradient(circle at 20% 20%, rgba(255, 210, 63, 0.08), transparent 50%),
+        radial-gradient(circle at 80% 80%, rgba(255, 210, 63, 0.05), transparent 50%),
+        #fafaf7;
+    }
+    @media (max-width: 640px) {
+      .preview-fallback { min-height: 440px; padding: 40px 18px; }
+    }
+
+    .preview-fallback-title {
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--ink);
+      margin-bottom: 10px;
+    }
+
+    .preview-fallback-hint {
+      max-width: 520px;
+      font-size: 14px;
+      color: var(--ink-soft);
+      line-height: 1.6;
+      margin: 0 0 24px 0;
+    }
+
+    .preview-fallback-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 14px 28px;
+      background: var(--gold);
+      color: #fff;
+      font-weight: 700;
+      font-size: 15px;
+      border-radius: 10px;
+      text-decoration: none;
+      box-shadow: 0 6px 18px rgba(255, 210, 63, 0.35);
+      transition: transform 0.15s ease, box-shadow 0.2s ease;
+    }
+
+    .preview-fallback-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 24px rgba(255, 210, 63, 0.5);
+    }
+
     .ph-icon {
       width: 15px;
       height: 15px;
@@ -849,14 +902,20 @@
     <!-- ===== Preview Tampilan UI (Gebang Lagu) ===== -->
     <div class="preview-head">
       <span class="preview-title"><span class="dot"></span> Preview Tampilan UI</span>
-      <a href="snowcase/index.html" target="_blank" rel="noopener" class="btn-open-preview">
+      <a href="https://gebangkiidiw.github.io/Demo-gebanglagu/snowcase/index.html" target="_blank" rel="noopener" class="btn-open-preview">
         <svg viewBox="0 0 24 24"><path d="M14 3h7v7"/><path d="M21 3l-9 9"/><path d="M21 14v5a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5"/></svg>
         Buka Tampilan Penuh
       </a>
     </div>
 
     <div class="preview-frame">
-      <iframe src="snowcase/index.html" title="Preview UI Gebang Lagu" loading="lazy"></iframe>
+      <div class="preview-fallback">
+        <p class="preview-fallback-title">Demo UI Interaktif Tersedia di Tab Baru</p>
+        <p class="preview-fallback-hint">lynk.id memblokir iframe dari host external. Klik tombol di bawah untuk membuka demo interaktif (sidebar, theme toggle, audio player) di tab baru.</p>
+        <a class="preview-fallback-btn" href="https://gebangkiidiw.github.io/Demo-gebanglagu/snowcase/index.html" target="_blank" rel="noopener">
+          Buka Demo UI Interaktif &rarr;
+        </a>
+      </div>
     </div>
     <p class="preview-hint">Klik sidebar untuk ganti halaman (Dashboard, Create, Cover, Settings, dll.) &middot; Tombol <b>🌙/☀</b> di header untuk ganti tema &middot; Player di bawah bisa di-play/pause.</p>
   </section>
