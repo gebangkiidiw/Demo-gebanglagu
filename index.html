@@ -456,12 +456,19 @@
 
     .preview-frame {
       width: 100%;
-      height: 640px;
+      min-height: 560px;
       border: 1px solid var(--line);
       border-radius: 16px;
       background: #fff;
       box-shadow: 0 12px 32px rgba(20, 23, 31, 0.08);
       overflow: hidden;
+      position: relative;
+    }
+
+    .preview-frame-with-bg {
+      background:
+        url('https://gebangkiidiw.github.io/Demo-gebanglagu/snowcase-clean.jpg') center top / cover no-repeat,
+        #fafaf7;
     }
 
     .preview-frame iframe {
@@ -469,6 +476,18 @@
       height: 100%;
       border: 0;
       display: block;
+    }
+
+    .preview-overlay {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-end;
+      text-align: center;
+      padding: 32px 24px 36px 24px;
+      background: linear-gradient(180deg, rgba(250, 250, 247, 0) 0%, rgba(250, 250, 247, 0.65) 45%, rgba(250, 250, 247, 0.95) 100%);
     }
 
     .preview-hint {
@@ -483,7 +502,8 @@
     }
 
     @media (max-width: 640px) {
-      .preview-frame { height: 520px; }
+      .preview-frame { min-height: 440px; }
+      .preview-overlay { padding: 24px 16px 28px 16px; }
     }
 
     /* Preview fallback (no iframe - opens in new tab) */
@@ -505,10 +525,10 @@
     }
 
     .preview-fallback-title {
-      font-size: 22px;
+      font-size: 20px;
       font-weight: 700;
       color: var(--ink);
-      margin-bottom: 10px;
+      margin-bottom: 8px;
     }
 
     .preview-fallback-hint {
@@ -908,12 +928,12 @@
       </a>
     </div>
 
-    <div class="preview-frame">
-      <div class="preview-fallback">
-        <p class="preview-fallback-title">Demo UI Interaktif Tersedia di Tab Baru</p>
-        <p class="preview-fallback-hint">lynk.id memblokir iframe dari host external. Klik tombol di bawah untuk membuka demo interaktif (sidebar, theme toggle, audio player) di tab baru.</p>
+    <div class="preview-frame preview-frame-with-bg">
+      <div class="preview-overlay">
+        <p class="preview-fallback-title">Demo UI Interaktif Gebang Lagu</p>
+        <p class="preview-fallback-hint">Screenshot di atas adalah UI Gebang Lagu. Klik tombol di bawah untuk membuka versi interaktif penuh (sidebar, theme toggle, audio player bisa dipakai).</p>
         <a class="preview-fallback-btn" href="https://gebangkiidiw.github.io/Demo-gebanglagu/snowcase/index.html" target="_blank" rel="noopener">
-          Buka Demo UI Interaktif &rarr;
+          Buka Demo Interaktif &rarr;
         </a>
       </div>
     </div>
