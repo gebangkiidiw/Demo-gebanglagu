@@ -1,23 +1,31 @@
-# Demo Gebang Lagu
+# Gebang Store — Landing Page
 
-Showcase HTML statis dari UI aplikasi **Gebang Lagu — Batch AI Music Creator**.
+Landing page utama untuk Gebang Studio (3 produk: Gebang Lagu, LoopStream, Gebang Render).
 
 Live: https://gebangkiidiw.github.io/Demo-gebanglagu/
 
-Single file, tidak butuh build / framework / Electron. Logo, CSS, dan JS sudah ter-inlined ke `index.html`. Buka di browser modern apa pun.
+## Isi repo
 
-## Demo mencakup
+- `index.html` — Landing page utuh (hero, 3 paket per produk, harga, FAQ, kontak)
+- `snowcase/index.html` — Showcase UI interaktif Gebang Lagu (single-file, 144 KB, semua asset ter-inlined). Di-embed via iframe di landing page.
 
-- Sidebar navigasi 8 halaman (Dashboard, Create/Generate, Cover Musik, Projects, History, Settings, Help)
-- Theme toggle dark/light
-- Audio player bar (play/pause, mute, seek, volume)
-- Sample data: 4 jalur API, 8 kunci, 12 lagu, 5 riwayat cover, log generate
-- Sidebar collapse
+## Produk
 
-## Sumber
+| Slug | Produk | Halaman di repo |
+|---|---|---|
+| `#gebanglagu` | Gebang Lagu — Batch AI Music Creator | section di `index.html` |
+| `#loopstream` | LoopStream — Live 24/7 | section di `index.html` |
+| `#gebangrender` | Gebang Render — Render Cepat YouTube | section di `index.html` |
 
-Showcase ini di-render dari `renderer/style.css` aplikasi asli Gebang Lagu. Update rilis mengikuti perubahan UI aplikasi.
+Setiap tombol "Pilih Paket" mengarah ke checkout di `lynk.id/gebangkiidiw/.../checkout`.
+
+## Lokal development
+
+```bash
+python3 -m http.server 8000
+# buka http://localhost:8000
+```
 
 ## Lisensi
 
-© Gebang Studio. Untuk preview produk.
+© Gebang Studio. Untuk preview & penjualan produk.
