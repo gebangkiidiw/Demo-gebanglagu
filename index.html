@@ -466,9 +466,23 @@
     }
 
     .preview-frame-with-bg {
-      background:
-        url('https://cdn.lynkid.my.id/media/04-09-2026/1788486866743_7010445.webp') center top / cover no-repeat,
-        #fafaf7;
+      background: #fafaf7;
+    }
+
+    .preview-bg-img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+      display: block;
+      z-index: 0;
+    }
+
+    .preview-overlay {
+      z-index: 1;
     }
 
     .preview-frame iframe {
@@ -929,6 +943,7 @@
     </div>
 
     <div class="preview-frame preview-frame-with-bg">
+      <img class="preview-bg-img" src="https://cdn.lynkid.my.id/media/04-09-2026/1788486866743_7010445.webp" alt="Preview UI Gebang Lagu" />
       <div class="preview-overlay">
         <p class="preview-fallback-title">Demo UI Interaktif Gebang Lagu</p>
         <p class="preview-fallback-hint">Screenshot di atas adalah UI Gebang Lagu. Klik tombol di bawah untuk membuka versi interaktif penuh (sidebar, theme toggle, audio player bisa dipakai).</p>
